@@ -1,0 +1,23 @@
+spring:
+  data:
+    mongodb:
+      uri: ${spring.data.mongodb.uri}
+  main:
+    allow-bean-definition-overriding: true
+  app:
+    user-service-url: http://localhost:8083/api/user
+    product-service-url: http://localhost:8080/api/products
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+server:
+  servlet:
+    context-path: /api/order
+  port: 8084
+
+logging:
+  file: orderServiceLogs.logs
+  path: resources/log

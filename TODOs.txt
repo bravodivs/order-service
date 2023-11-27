@@ -1,0 +1,29 @@
+micro-service intercommunication: REST template(chosen), feign client, asynchronous, kafka, web client?
+
+should entries in order table be unique, if yes but how?
+
+            /* : this gives status code along with message as a full string. how to get only message.
+             *  extract the message and status code.
+             * would be too much code*/
+
+400 for productRequest not foiunf or not quant
+/* - not able to decode the error*/
+ /* - manual configs of rest template
+     *  timeout, read timeout, etc*/
+
+    rest endpoint servivce class
+
+    todo rabitmq-create docker image- another endpoint(give order request->order entity[order status-unprocessed]->save to db)
+        give the prder id tp rabit mq service.
+        the listenrr will listen to rmq, pik the order, process it(such as total cost), then save to db.
+
+
+    todo: api gateway should call apis and handle all the validations of token etc. should not get the data but only validation.
+    todo: learn about api gateways, service discovery.
+
+    :validations of order request
+    : in prodyct find not found, give order ids of all of what not available.
+    : if username different and accesstoken of different user then throw error. <- part handled by user service
+    :fix the price rule.
+
+    : remove kson proeprty
